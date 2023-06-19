@@ -11,6 +11,28 @@
 		7E1ED8362A408FD900C777F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8352A408FD900C777F3 /* ContentView.swift */; };
 		7E1ED8382A408FDA00C777F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1ED8372A408FDA00C777F3 /* Assets.xcassets */; };
 		7E1ED83B2A408FDA00C777F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1ED83A2A408FDA00C777F3 /* Preview Assets.xcassets */; };
+		7E1ED84E2A4090CF00C777F3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED84D2A4090CF00C777F3 /* AuthViewModel.swift */; };
+		7E1ED8502A4090E300C777F3 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED84F2A4090E300C777F3 /* LoadView.swift */; };
+		7E1ED8522A40910100C777F3 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8512A40910100C777F3 /* AuthenticationView.swift */; };
+		7E1ED8542A40911100C777F3 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8532A40911100C777F3 /* AuthorizationView.swift */; };
+		7E1ED8562A40913400C777F3 /* DescriptionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8552A40913400C777F3 /* DescriptionStep.swift */; };
+		7E1ED8582A40914300C777F3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8572A40914300C777F3 /* OnboardingView.swift */; };
+		7E1ED85A2A40915100C777F3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8592A40915100C777F3 /* OnboardingViewModel.swift */; };
+		7E1ED85C2A40916800C777F3 /* CreditCenterWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED85B2A40916800C777F3 /* CreditCenterWebView.swift */; };
+		7E1ED85E2A40917600C777F3 /* WebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED85D2A40917600C777F3 /* WebModel.swift */; };
+		7E1ED8602A40918400C777F3 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED85F2A40918400C777F3 /* WebViewContainer.swift */; };
+		7E1ED8622A40919100C777F3 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8612A40919100C777F3 /* WebViewModel.swift */; };
+		7E1ED8642A40945A00C777F3 /* FirstLoanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8632A40945A00C777F3 /* FirstLoanView.swift */; };
+		7E1ED8682A40948A00C777F3 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8672A40948A00C777F3 /* NetworkModel.swift */; };
+		7E1ED86A2A40949800C777F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8692A40949800C777F3 /* NetworkService.swift */; };
+		7E1ED86C2A40950600C777F3 /* Colors+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED86B2A40950600C777F3 /* Colors+init.swift */; };
+		7E1ED86E2A40951200C777F3 /* View+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED86D2A40951200C777F3 /* View+init.swift */; };
+		7E1ED8702A40952400C777F3 /* WebViewContainer+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED86F2A40952400C777F3 /* WebViewContainer+init.swift */; };
+		7E1ED8722A40954100C777F3 /* TextFieldsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8712A40954100C777F3 /* TextFieldsModifier.swift */; };
+		7E1ED8752A40995B00C777F3 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED8742A40995B00C777F3 /* PopupView */; };
+		7E1ED8782A4099A900C777F3 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED8772A4099A900C777F3 /* AppsFlyerLib */; };
+		7E1ED87B2A4099C900C777F3 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED87A2A4099C900C777F3 /* OneSignal */; };
+		7E1ED87D2A4099C900C777F3 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED87C2A4099C900C777F3 /* OneSignalExtension */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +41,24 @@
 		7E1ED8352A408FD900C777F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E1ED8372A408FDA00C777F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E1ED83A2A408FDA00C777F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E1ED84D2A4090CF00C777F3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		7E1ED84F2A4090E300C777F3 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		7E1ED8512A40910100C777F3 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		7E1ED8532A40911100C777F3 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		7E1ED8552A40913400C777F3 /* DescriptionStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionStep.swift; sourceTree = "<group>"; };
+		7E1ED8572A40914300C777F3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7E1ED8592A40915100C777F3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		7E1ED85B2A40916800C777F3 /* CreditCenterWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCenterWebView.swift; sourceTree = "<group>"; };
+		7E1ED85D2A40917600C777F3 /* WebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebModel.swift; sourceTree = "<group>"; };
+		7E1ED85F2A40918400C777F3 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		7E1ED8612A40919100C777F3 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		7E1ED8632A40945A00C777F3 /* FirstLoanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoanView.swift; sourceTree = "<group>"; };
+		7E1ED8672A40948A00C777F3 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		7E1ED8692A40949800C777F3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7E1ED86B2A40950600C777F3 /* Colors+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+init.swift"; sourceTree = "<group>"; };
+		7E1ED86D2A40951200C777F3 /* View+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+init.swift"; sourceTree = "<group>"; };
+		7E1ED86F2A40952400C777F3 /* WebViewContainer+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebViewContainer+init.swift"; sourceTree = "<group>"; };
+		7E1ED8712A40954100C777F3 /* TextFieldsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E1ED8752A40995B00C777F3 /* PopupView in Frameworks */,
+				7E1ED8782A4099A900C777F3 /* AppsFlyerLib in Frameworks */,
+				7E1ED87B2A4099C900C777F3 /* OneSignal in Frameworks */,
+				7E1ED87D2A4099C900C777F3 /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +95,9 @@
 		7E1ED8322A408FD900C777F3 /* MFOApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E1ED8432A40901E00C777F3 /* NetworkService */,
+				7E1ED8422A40901500C777F3 /* Features */,
+				7E1ED8412A40900500C777F3 /* CommonUI */,
 				7E1ED8332A408FD900C777F3 /* MFOAppApp.swift */,
 				7E1ED8352A408FD900C777F3 /* ContentView.swift */,
 				7E1ED8372A408FDA00C777F3 /* Assets.xcassets */,
@@ -65,6 +112,109 @@
 				7E1ED83A2A408FDA00C777F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7E1ED8412A40900500C777F3 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8452A40903F00C777F3 /* Extension */,
+				7E1ED8442A40903300C777F3 /* CustomUIComponents */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		7E1ED8422A40901500C777F3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8492A40907B00C777F3 /* LoanFeature */,
+				7E1ED8482A40907100C777F3 /* CreditWebView */,
+				7E1ED8472A40906500C777F3 /* CreditOnboarding */,
+				7E1ED8462A40905600C777F3 /* AuthFeature */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7E1ED8432A40901E00C777F3 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8672A40948A00C777F3 /* NetworkModel.swift */,
+				7E1ED8692A40949800C777F3 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		7E1ED8442A40903300C777F3 /* CustomUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8712A40954100C777F3 /* TextFieldsModifier.swift */,
+			);
+			path = CustomUIComponents;
+			sourceTree = "<group>";
+		};
+		7E1ED8452A40903F00C777F3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED86B2A40950600C777F3 /* Colors+init.swift */,
+				7E1ED86D2A40951200C777F3 /* View+init.swift */,
+				7E1ED86F2A40952400C777F3 /* WebViewContainer+init.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7E1ED8462A40905600C777F3 /* AuthFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED84C2A4090B500C777F3 /* Authorization */,
+				7E1ED84B2A4090A900C777F3 /* Authentication */,
+				7E1ED84D2A4090CF00C777F3 /* AuthViewModel.swift */,
+				7E1ED84F2A4090E300C777F3 /* LoadView.swift */,
+			);
+			path = AuthFeature;
+			sourceTree = "<group>";
+		};
+		7E1ED8472A40906500C777F3 /* CreditOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8552A40913400C777F3 /* DescriptionStep.swift */,
+				7E1ED8572A40914300C777F3 /* OnboardingView.swift */,
+				7E1ED8592A40915100C777F3 /* OnboardingViewModel.swift */,
+			);
+			path = CreditOnboarding;
+			sourceTree = "<group>";
+		};
+		7E1ED8482A40907100C777F3 /* CreditWebView */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED85B2A40916800C777F3 /* CreditCenterWebView.swift */,
+				7E1ED85D2A40917600C777F3 /* WebModel.swift */,
+				7E1ED85F2A40918400C777F3 /* WebViewContainer.swift */,
+				7E1ED8612A40919100C777F3 /* WebViewModel.swift */,
+			);
+			path = CreditWebView;
+			sourceTree = "<group>";
+		};
+		7E1ED8492A40907B00C777F3 /* LoanFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8632A40945A00C777F3 /* FirstLoanView.swift */,
+			);
+			path = LoanFeature;
+			sourceTree = "<group>";
+		};
+		7E1ED84B2A4090A900C777F3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8512A40910100C777F3 /* AuthenticationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7E1ED84C2A4090B500C777F3 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				7E1ED8532A40911100C777F3 /* AuthorizationView.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +233,12 @@
 			dependencies = (
 			);
 			name = MFOApp;
+			packageProductDependencies = (
+				7E1ED8742A40995B00C777F3 /* PopupView */,
+				7E1ED8772A4099A900C777F3 /* AppsFlyerLib */,
+				7E1ED87A2A4099C900C777F3 /* OneSignal */,
+				7E1ED87C2A4099C900C777F3 /* OneSignalExtension */,
+			);
 			productName = MFOApp;
 			productReference = 7E1ED8302A408FD900C777F3 /* MFOApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +267,11 @@
 				Base,
 			);
 			mainGroup = 7E1ED8272A408FD900C777F3;
+			packageReferences = (
+				7E1ED8732A40995B00C777F3 /* XCRemoteSwiftPackageReference "PopupView" */,
+				7E1ED8762A4099A900C777F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			productRefGroup = 7E1ED8312A408FD900C777F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +298,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E1ED8622A40919100C777F3 /* WebViewModel.swift in Sources */,
+				7E1ED8502A4090E300C777F3 /* LoadView.swift in Sources */,
+				7E1ED86E2A40951200C777F3 /* View+init.swift in Sources */,
+				7E1ED8602A40918400C777F3 /* WebViewContainer.swift in Sources */,
 				7E1ED8362A408FD900C777F3 /* ContentView.swift in Sources */,
+				7E1ED86A2A40949800C777F3 /* NetworkService.swift in Sources */,
+				7E1ED8542A40911100C777F3 /* AuthorizationView.swift in Sources */,
+				7E1ED8562A40913400C777F3 /* DescriptionStep.swift in Sources */,
+				7E1ED85E2A40917600C777F3 /* WebModel.swift in Sources */,
+				7E1ED8682A40948A00C777F3 /* NetworkModel.swift in Sources */,
+				7E1ED85A2A40915100C777F3 /* OnboardingViewModel.swift in Sources */,
+				7E1ED8722A40954100C777F3 /* TextFieldsModifier.swift in Sources */,
 				7E1ED8342A408FD900C777F3 /* MFOAppApp.swift in Sources */,
+				7E1ED8702A40952400C777F3 /* WebViewContainer+init.swift in Sources */,
+				7E1ED8582A40914300C777F3 /* OnboardingView.swift in Sources */,
+				7E1ED84E2A4090CF00C777F3 /* AuthViewModel.swift in Sources */,
+				7E1ED8642A40945A00C777F3 /* FirstLoanView.swift in Sources */,
+				7E1ED8522A40910100C777F3 /* AuthenticationView.swift in Sources */,
+				7E1ED85C2A40916800C777F3 /* CreditCenterWebView.swift in Sources */,
+				7E1ED86C2A40950600C777F3 /* Colors+init.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +518,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E1ED8732A40995B00C777F3 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+		7E1ED8762A4099A900C777F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.11.0;
+			};
+		};
+		7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E1ED8742A40995B00C777F3 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1ED8732A40995B00C777F3 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		7E1ED8772A4099A900C777F3 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1ED8762A4099A900C777F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		7E1ED87A2A4099C900C777F3 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+		7E1ED87C2A4099C900C777F3 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E1ED8282A408FD900C777F3 /* Project object */;
 }
