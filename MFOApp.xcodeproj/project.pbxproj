@@ -31,12 +31,12 @@
 		7E1ED8722A40954100C777F3 /* TextFieldsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8712A40954100C777F3 /* TextFieldsModifier.swift */; };
 		7E1ED8752A40995B00C777F3 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED8742A40995B00C777F3 /* PopupView */; };
 		7E1ED8782A4099A900C777F3 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED8772A4099A900C777F3 /* AppsFlyerLib */; };
-		7E1ED87B2A4099C900C777F3 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED87A2A4099C900C777F3 /* OneSignal */; };
-		7E1ED87D2A4099C900C777F3 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED87C2A4099C900C777F3 /* OneSignalExtension */; };
 		9AE6FD252A40A4D900194820 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6FD242A40A4D900194820 /* NotificationService.swift */; };
 		9AE6FD292A40A4D900194820 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9AE6FD222A40A4D900194820 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AE6FD302A40A4EE00194820 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE6FD2F2A40A4EE00194820 /* OneSignal */; };
 		9AE6FD322A40A4F800194820 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE6FD312A40A4F800194820 /* OneSignalExtension */; };
+		9AE6FD352A40BED700194820 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE6FD342A40BED700194820 /* OneSignal */; };
+		9AE6FD372A40BEDC00194820 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE6FD362A40BEDC00194820 /* OneSignalExtension */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +101,8 @@
 			files = (
 				7E1ED8752A40995B00C777F3 /* PopupView in Frameworks */,
 				7E1ED8782A4099A900C777F3 /* AppsFlyerLib in Frameworks */,
-				7E1ED87B2A4099C900C777F3 /* OneSignal in Frameworks */,
-				7E1ED87D2A4099C900C777F3 /* OneSignalExtension in Frameworks */,
+				9AE6FD352A40BED700194820 /* OneSignal in Frameworks */,
+				9AE6FD372A40BEDC00194820 /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +301,8 @@
 			packageProductDependencies = (
 				7E1ED8742A40995B00C777F3 /* PopupView */,
 				7E1ED8772A4099A900C777F3 /* AppsFlyerLib */,
-				7E1ED87A2A4099C900C777F3 /* OneSignal */,
-				7E1ED87C2A4099C900C777F3 /* OneSignalExtension */,
+				9AE6FD342A40BED700194820 /* OneSignal */,
+				9AE6FD362A40BEDC00194820 /* OneSignalExtension */,
 			);
 			productName = MFOApp;
 			productReference = 7E1ED8302A408FD900C777F3 /* Cashio.app */;
@@ -622,6 +622,7 @@
 		9AE6FD2B2A40A4D900194820 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DG4CML53B;
@@ -647,6 +648,7 @@
 		9AE6FD2C2A40A4D900194820 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DG4CML53B;
@@ -739,22 +741,22 @@
 			package = 7E1ED8762A4099A900C777F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
 			productName = AppsFlyerLib;
 		};
-		7E1ED87A2A4099C900C777F3 /* OneSignal */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
-			productName = OneSignal;
-		};
-		7E1ED87C2A4099C900C777F3 /* OneSignalExtension */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
-			productName = OneSignalExtension;
-		};
 		9AE6FD2F2A40A4EE00194820 /* OneSignal */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
 			productName = OneSignal;
 		};
 		9AE6FD312A40A4F800194820 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		9AE6FD342A40BED700194820 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+		9AE6FD362A40BEDC00194820 /* OneSignalExtension */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E1ED8792A4099C900C777F3 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
 			productName = OneSignalExtension;
