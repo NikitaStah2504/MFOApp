@@ -86,9 +86,9 @@ struct MFOAppApp: App {
     var body: some Scene {
       WindowGroup {
         if firstLaunch {
-          OnboardingView().environmentObject(OnboardingViewModel())
+          FirstLoanView().environmentObject(LoanViewModel())
         } else {
-         CreditCenterWebView()
+          LoanListView().environmentObject(LoanViewModel())
         }
       }
     }

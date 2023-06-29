@@ -11,14 +11,14 @@ import WebKit
 struct WebViewContainer: UIViewRepresentable {
   
   @ObservedObject var webViewModel: WebViewViewModel
-  @AppStorage("message") var message: String = ""
+  var loanUrl: String
   
   func makeCoordinator() -> WebViewContainer.Coordinator {
     Coordinator(webViewModel: webViewModel, parent: self)
   }
   
   func makeUIView(context: Context) -> WKWebView {
-      guard let url = URL(string: message) else {
+      guard let url = URL(string: loanUrl) else {
       return WKWebView()
     }
     let request = URLRequest(url: url)
@@ -41,7 +41,6 @@ struct WebViewContainer: UIViewRepresentable {
       
       webViewModel.shouldReload = false
     }
-   // webViewModel.title = uiView.title ?? ""
     if webViewModel.goHome {
       guard let  item = uiView.backForwardList.backList.first else {return}
       uiView.go(to: item)

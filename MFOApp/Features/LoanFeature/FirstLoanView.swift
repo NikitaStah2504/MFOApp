@@ -8,82 +8,175 @@
 import SwiftUI
 
 struct FirstLoanView: View {
-  @State private var total: Double = 0.0
-  @State private var days: Double = 0.0
+  @State
+  private var total: Double = 0.0
+  @State
+  private var days: Double = 0.0
+  @State
+  private var agreement: Bool = false
+  @State
+  private var searchAdd: Bool = false
+  @State
+  private var showMessage: Bool = false
   
-  @EnvironmentObject var viewModel: AuthViewModel
+  @EnvironmentObject var viewModel: LoanViewModel
   
   var body: some View {
-    NavigationView {
+      ScrollView(showsIndicators: false) {
       ZStack {
-        Color.contentMain
-          .ignoresSafeArea()
-        VStack(alignment: .leading) {
-          HStack {
-            Image("logo")
-              .resizable()
-              .scaledToFit()
-              .frame(width: 40, height: 42)
-            Text("Credit Center")
+        Image("backImage")
+          .resizable()
+          .scaledToFill()
+          .frame(width: 400, height: 300)
+          .padding(.top, -310)
+        VStack {
+          VStack(alignment: .center) {
+            Text("Lãi suất từ 0%")
               .foregroundColor(.white)
-              .font(.system(size: 23, weight: .semibold))
-          }.padding()
-          Text("Первый займ - под 0%")
-            .foregroundColor(.white)
-            .font(.system(size: 26, weight: .semibold))
-            .padding()
-          VStack {
+              .font(.system(size: 36, weight: .semibold))
+            Text("Tổng số tiền tới")
+              .foregroundColor(.white)
+              .font(.system(size: 14, weight: .light))
             HStack {
-              Text("Вы берете")
+              Text("\(viewModel.loanAmount, specifier: "%.f")₫")
+                .font(.system(size: 36, weight: .semibold))
+                .foregroundColor(.white)
+                .frame(width: 260, height: 10)
+              Button {
+                searchAdd.toggle()
+              } label: {
+                Image("newLoan")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 26, height: 30)
+              }
+            }
+            }.padding(.top, 20)
+          VStack {
+            UISliderView(value: $viewModel.loanAmount,
+                         minValue: 1000000,
+                         maxValue: 20000000,
+                         thumbColor: .white,
+                         minTrackColor: .white,
+                         maxTrackColor: .gray)
+            HStack {
+              Text("1 000 000₫")
                 .foregroundColor(.white)
               Spacer()
-              Text("\(viewModel.loanAmount, specifier: "%.f")₽")
+              Text("20 000 000₫")
                 .foregroundColor(.white)
-            }
-            Slider(value: $viewModel.loanAmount, in: 0...130000, step: 5000)
-          }.padding()
-          
+            }.padding(.top, 16)
+          }.padding(.all, 14)
           VStack {
-            HStack {
-              Text("На срок")
-                .foregroundColor(.white)
-              Spacer()
-              Text("\(days, specifier: "%.f") дней")
-                .foregroundColor(.white)
+            textFieldsAuthentication()
+              .padding(.top, 60)
+            getValueButton()
+              .padding(.bottom, 16)
+            HStack(spacing: 20) {
+              agreementPersonalData()
+              Text("Tôi đồng ý với việc xử lý dữ liệu cá nhân của mình")
+                .foregroundColor(.black)
             }
-            Slider(value: $days, in: 0...240, step: 1.0)
-          }.padding()
-          Spacer()
-          getValueButton()
-          signIn()
+          }
         }
       }
-    }.navigationViewStyle(StackNavigationViewStyle())
+      .fullScreenCover(isPresented: $viewModel.showLoad) {
+        LoadView(viewModel: viewModel)
+      }
+      }.onTapGesture {
+        UIApplication.shared.endEditing()
+      }
+      .alert("Trạng thái vay", isPresented: $searchAdd) {
+        TextField("", text: $viewModel.searchLoan)
+        Button("Ok", action: submit)
+        Button("Cancel", role: .cancel) {}
+      }
+      .alert("Số thứ tự không hợp lệ", isPresented: $showMessage) {
+        Button("Ok", role: .cancel){}
+      }
+  }
+  
+  private func submit() {
+    showMessage.toggle()
   }
   
   @ViewBuilder private func getValueButton() -> some View {
-    NavigationLink {
-      AuthenticationView(viewModel: viewModel)
+    Button {
+      if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {
+        viewModel.showLoad.toggle()
+        viewModel.showTabBar()
+        viewModel.sendData()
+      }
     } label: {
-      Text("Получить деньги")
-        .padding(16)
-        .frame(maxWidth: .infinity)
-        .background(Color.accentMain)
-        .cornerRadius(10)
-        .padding(.horizontal, 16)
-        .foregroundColor(.white)
+      if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {
+        Text("Điền đơn")
+          .padding(16)
+          .frame(maxWidth: .infinity)
+          .background(Color.accentMain)
+          .cornerRadius(10)
+          .padding(.horizontal, 16)
+          .foregroundColor(.white)
+      } else {
+        Text("Điền đơn")
+          .padding(16)
+          .frame(maxWidth: .infinity)
+          .background(Color.gray)
+          .cornerRadius(10)
+          .padding(.horizontal, 16)
+          .foregroundColor(.white)
+      }
     }
   }
   
-  @ViewBuilder private func signIn() -> some View {
-    NavigationLink {
-      AuthorizationView(viewModel: viewModel)
+  @ViewBuilder private func textFieldsAuthentication() -> some View {
+    VStack(spacing: -20) {
+      VStack(alignment: .leading, spacing: 2) {
+        Text("Tên")
+          .font(.system(size: 14))
+        TextField("", text: $viewModel.name)
+            .modifier(TextFieldsModifier())
+      }.padding()
+      VStack(alignment: .leading, spacing: 2) {
+        Text("Email")
+          .font(.system(size: 14))
+        TextField("", text: $viewModel.email)
+            .modifier(TextFieldsModifier())
+            .keyboardType(.emailAddress)
+      }.padding()
+      VStack(alignment: .leading, spacing: 2) {
+        Text("Số điện thoại")
+          .font(.system(size: 14))
+        TextField("", text: $viewModel.phoneNumber)
+            .modifier(TextFieldsModifier())
+            .keyboardType(.numberPad)
+      }.padding()
+    }
+  }
+  
+  @ViewBuilder private func agreementPersonalData() -> some View {
+    Button {
+      agreement.toggle()
     } label: {
-      Text("Войти")
-        .padding(16)
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal, 16)
-        .foregroundColor(.white)
+      if agreement {
+        Image(systemName: "checkmark")
+          .padding(16)
+          .frame(width: 20, height: 20)
+          .background(Color.accentMain)
+          .cornerRadius(6)
+          .padding(.horizontal, 16)
+          .foregroundColor(.white)
+      } else {
+        Image(systemName: "")
+          .padding(16)
+          .cornerRadius(6)
+          .foregroundColor(.black)
+          .frame(width: 20, height: 20)
+          .overlay(
+            RoundedRectangle(cornerRadius: 6)
+              .stroke(Color.gray, lineWidth: 2)
+          )
+          .padding(.horizontal, 16)
+      }
     }
   }
 }
@@ -91,7 +184,7 @@ struct FirstLoanView: View {
 
 struct FirstLoanView_Previews: PreviewProvider {
   static var previews: some View {
-    FirstLoanView()
+    FirstLoanView().environmentObject(LoanViewModel())
   }
 }
 

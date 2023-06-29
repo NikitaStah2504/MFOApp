@@ -11,10 +11,12 @@ struct TextFieldsModifier: ViewModifier {
   func body(content: Content) -> some View {
     content
     .frame(height: 54)
-    .foregroundColor(.white)
-    .background(Color.textFields)
+    .foregroundColor(.black)
     .cornerRadius(12)
-    .padding()
+    .overlay(
+      RoundedRectangle(cornerRadius: 12)
+        .stroke(Color.blue, lineWidth: 1)
+    )
     .multilineTextAlignment(.center)
     .frame(maxWidth: .infinity)
   }

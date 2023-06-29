@@ -11,13 +11,7 @@
 		7E1ED8362A408FD900C777F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8352A408FD900C777F3 /* ContentView.swift */; };
 		7E1ED8382A408FDA00C777F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1ED8372A408FDA00C777F3 /* Assets.xcassets */; };
 		7E1ED83B2A408FDA00C777F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1ED83A2A408FDA00C777F3 /* Preview Assets.xcassets */; };
-		7E1ED84E2A4090CF00C777F3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED84D2A4090CF00C777F3 /* AuthViewModel.swift */; };
 		7E1ED8502A4090E300C777F3 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED84F2A4090E300C777F3 /* LoadView.swift */; };
-		7E1ED8522A40910100C777F3 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8512A40910100C777F3 /* AuthenticationView.swift */; };
-		7E1ED8542A40911100C777F3 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8532A40911100C777F3 /* AuthorizationView.swift */; };
-		7E1ED8562A40913400C777F3 /* DescriptionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8552A40913400C777F3 /* DescriptionStep.swift */; };
-		7E1ED8582A40914300C777F3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8572A40914300C777F3 /* OnboardingView.swift */; };
-		7E1ED85A2A40915100C777F3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8592A40915100C777F3 /* OnboardingViewModel.swift */; };
 		7E1ED85C2A40916800C777F3 /* CreditCenterWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED85B2A40916800C777F3 /* CreditCenterWebView.swift */; };
 		7E1ED85E2A40917600C777F3 /* WebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED85D2A40917600C777F3 /* WebModel.swift */; };
 		7E1ED8602A40918400C777F3 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED85F2A40918400C777F3 /* WebViewContainer.swift */; };
@@ -31,6 +25,12 @@
 		7E1ED8722A40954100C777F3 /* TextFieldsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1ED8712A40954100C777F3 /* TextFieldsModifier.swift */; };
 		7E1ED8752A40995B00C777F3 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED8742A40995B00C777F3 /* PopupView */; };
 		7E1ED8782A4099A900C777F3 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1ED8772A4099A900C777F3 /* AppsFlyerLib */; };
+		7E521C962A4AEDB600EB4BD5 /* LoanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C952A4AEDB600EB4BD5 /* LoanListView.swift */; };
+		7E521C982A4AEDC600EB4BD5 /* LoanListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C972A4AEDC600EB4BD5 /* LoanListCellView.swift */; };
+		7E521C9A2A4B058300EB4BD5 /* LoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */; };
+		7E521C9C2A4B7E4000EB4BD5 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */; };
+		7E6A6F062A4B949C00C48F79 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A6F052A4B949C00C48F79 /* LoanModel.swift */; };
+		7EFB943E2A4C8772005FB661 /* UIApplication+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */; };
 		9AE6FD252A40A4D900194820 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6FD242A40A4D900194820 /* NotificationService.swift */; };
 		9AE6FD292A40A4D900194820 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9AE6FD222A40A4D900194820 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AE6FD302A40A4EE00194820 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE6FD2F2A40A4EE00194820 /* OneSignal */; };
@@ -69,13 +69,7 @@
 		7E1ED8352A408FD900C777F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E1ED8372A408FDA00C777F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E1ED83A2A408FDA00C777F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7E1ED84D2A4090CF00C777F3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		7E1ED84F2A4090E300C777F3 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
-		7E1ED8512A40910100C777F3 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		7E1ED8532A40911100C777F3 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
-		7E1ED8552A40913400C777F3 /* DescriptionStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionStep.swift; sourceTree = "<group>"; };
-		7E1ED8572A40914300C777F3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		7E1ED8592A40915100C777F3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		7E1ED85B2A40916800C777F3 /* CreditCenterWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCenterWebView.swift; sourceTree = "<group>"; };
 		7E1ED85D2A40917600C777F3 /* WebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebModel.swift; sourceTree = "<group>"; };
 		7E1ED85F2A40918400C777F3 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
@@ -87,6 +81,12 @@
 		7E1ED86D2A40951200C777F3 /* View+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+init.swift"; sourceTree = "<group>"; };
 		7E1ED86F2A40952400C777F3 /* WebViewContainer+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebViewContainer+init.swift"; sourceTree = "<group>"; };
 		7E1ED8712A40954100C777F3 /* TextFieldsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsModifier.swift; sourceTree = "<group>"; };
+		7E521C952A4AEDB600EB4BD5 /* LoanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListView.swift; sourceTree = "<group>"; };
+		7E521C972A4AEDC600EB4BD5 /* LoanListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListCellView.swift; sourceTree = "<group>"; };
+		7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewModel.swift; sourceTree = "<group>"; };
+		7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
+		7E6A6F052A4B949C00C48F79 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
+		7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Init.swift"; sourceTree = "<group>"; };
 		9AE6FD1D2A40A42E00194820 /* MFOApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MFOApp.entitlements; sourceTree = "<group>"; };
 		9AE6FD222A40A4D900194820 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE6FD242A40A4D900194820 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -173,10 +173,9 @@
 		7E1ED8422A40901500C777F3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7E521C942A4AED9B00EB4BD5 /* LoanList */,
 				7E1ED8492A40907B00C777F3 /* LoanFeature */,
 				7E1ED8482A40907100C777F3 /* CreditWebView */,
-				7E1ED8472A40906500C777F3 /* CreditOnboarding */,
-				7E1ED8462A40905600C777F3 /* AuthFeature */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -204,29 +203,10 @@
 				7E1ED86B2A40950600C777F3 /* Colors+init.swift */,
 				7E1ED86D2A40951200C777F3 /* View+init.swift */,
 				7E1ED86F2A40952400C777F3 /* WebViewContainer+init.swift */,
+				7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */,
+				7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		7E1ED8462A40905600C777F3 /* AuthFeature */ = {
-			isa = PBXGroup;
-			children = (
-				7E1ED84C2A4090B500C777F3 /* Authorization */,
-				7E1ED84B2A4090A900C777F3 /* Authentication */,
-				7E1ED84D2A4090CF00C777F3 /* AuthViewModel.swift */,
-				7E1ED84F2A4090E300C777F3 /* LoadView.swift */,
-			);
-			path = AuthFeature;
-			sourceTree = "<group>";
-		};
-		7E1ED8472A40906500C777F3 /* CreditOnboarding */ = {
-			isa = PBXGroup;
-			children = (
-				7E1ED8552A40913400C777F3 /* DescriptionStep.swift */,
-				7E1ED8572A40914300C777F3 /* OnboardingView.swift */,
-				7E1ED8592A40915100C777F3 /* OnboardingViewModel.swift */,
-			);
-			path = CreditOnboarding;
 			sourceTree = "<group>";
 		};
 		7E1ED8482A40907100C777F3 /* CreditWebView */ = {
@@ -244,24 +224,20 @@
 			isa = PBXGroup;
 			children = (
 				7E1ED8632A40945A00C777F3 /* FirstLoanView.swift */,
+				7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */,
+				7E1ED84F2A4090E300C777F3 /* LoadView.swift */,
 			);
 			path = LoanFeature;
 			sourceTree = "<group>";
 		};
-		7E1ED84B2A4090A900C777F3 /* Authentication */ = {
+		7E521C942A4AED9B00EB4BD5 /* LoanList */ = {
 			isa = PBXGroup;
 			children = (
-				7E1ED8512A40910100C777F3 /* AuthenticationView.swift */,
+				7E521C952A4AEDB600EB4BD5 /* LoanListView.swift */,
+				7E521C972A4AEDC600EB4BD5 /* LoanListCellView.swift */,
+				7E6A6F052A4B949C00C48F79 /* LoanModel.swift */,
 			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		7E1ED84C2A4090B500C777F3 /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				7E1ED8532A40911100C777F3 /* AuthorizationView.swift */,
-			);
-			path = Authorization;
+			path = LoanList;
 			sourceTree = "<group>";
 		};
 		9AE6FD232A40A4D900194820 /* OneSignalNotificationServiceExtension */ = {
@@ -395,24 +371,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E521C962A4AEDB600EB4BD5 /* LoanListView.swift in Sources */,
 				7E1ED8622A40919100C777F3 /* WebViewModel.swift in Sources */,
 				7E1ED8502A4090E300C777F3 /* LoadView.swift in Sources */,
 				7E1ED86E2A40951200C777F3 /* View+init.swift in Sources */,
 				7E1ED8602A40918400C777F3 /* WebViewContainer.swift in Sources */,
 				7E1ED8362A408FD900C777F3 /* ContentView.swift in Sources */,
+				7E521C982A4AEDC600EB4BD5 /* LoanListCellView.swift in Sources */,
 				7E1ED86A2A40949800C777F3 /* NetworkService.swift in Sources */,
-				7E1ED8542A40911100C777F3 /* AuthorizationView.swift in Sources */,
-				7E1ED8562A40913400C777F3 /* DescriptionStep.swift in Sources */,
+				7EFB943E2A4C8772005FB661 /* UIApplication+Init.swift in Sources */,
 				7E1ED85E2A40917600C777F3 /* WebModel.swift in Sources */,
 				7E1ED8682A40948A00C777F3 /* NetworkModel.swift in Sources */,
-				7E1ED85A2A40915100C777F3 /* OnboardingViewModel.swift in Sources */,
 				7E1ED8722A40954100C777F3 /* TextFieldsModifier.swift in Sources */,
 				7E1ED8342A408FD900C777F3 /* MFOAppApp.swift in Sources */,
+				7E521C9C2A4B7E4000EB4BD5 /* CustomSliderView.swift in Sources */,
+				7E6A6F062A4B949C00C48F79 /* LoanModel.swift in Sources */,
 				7E1ED8702A40952400C777F3 /* WebViewContainer+init.swift in Sources */,
-				7E1ED8582A40914300C777F3 /* OnboardingView.swift in Sources */,
-				7E1ED84E2A4090CF00C777F3 /* AuthViewModel.swift in Sources */,
+				7E521C9A2A4B058300EB4BD5 /* LoanViewModel.swift in Sources */,
 				7E1ED8642A40945A00C777F3 /* FirstLoanView.swift in Sources */,
-				7E1ED8522A40910100C777F3 /* AuthenticationView.swift in Sources */,
 				7E1ED85C2A40916800C777F3 /* CreditCenterWebView.swift in Sources */,
 				7E1ED86C2A40950600C777F3 /* Colors+init.swift in Sources */,
 			);
@@ -563,13 +539,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MFOApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 2DG4CML53B;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MFOApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -596,13 +571,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MFOApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 2DG4CML53B;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MFOApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -625,7 +599,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2DG4CML53B;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
@@ -651,7 +625,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2DG4CML53B;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
