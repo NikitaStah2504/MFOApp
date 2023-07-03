@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Logo-jeff-app-old.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -14,14 +14,14 @@ struct LoanListCellView: View {
   
   var body: some View {
     HStack(spacing: 50) {
-      Image(image)
+      Image(image.localized())
         .resizable()
         .scaledToFit()
         .frame(width: 94, height: 30)
-      Text(amount)
+      Text(amount.localized())
         .font(.system(size: 14, weight: .semibold))
       NavigationLink {
-        CreditCenterWebView(organizaitons: org)
+        CreditCenterWebView(organizaitons: org.localized())
       } label: {
         Image(systemName: "arrow.right")
           .resizable()
@@ -32,7 +32,6 @@ struct LoanListCellView: View {
               .stroke(Color.blue, lineWidth: 1)
           )
       }
-
     }
     .frame(width: 344, height: 62)
     .background(.white)

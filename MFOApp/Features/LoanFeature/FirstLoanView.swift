@@ -31,14 +31,14 @@ struct FirstLoanView: View {
           .padding(.top, -310)
         VStack {
           VStack(alignment: .center) {
-            Text("Lãi suất từ 0%")
+            Text("firstLoan")
               .foregroundColor(.white)
               .font(.system(size: 36, weight: .semibold))
-            Text("Tổng số tiền tới")
+            Text("valueLoan")
               .foregroundColor(.white)
               .font(.system(size: 14, weight: .light))
             HStack {
-              Text("\(viewModel.loanAmount, specifier: "%.f")₫")
+              Text("currency\(viewModel.loanAmount, specifier: "%.f")")
                 .font(.system(size: 36, weight: .semibold))
                 .foregroundColor(.white)
                 .frame(width: 260, height: 10)
@@ -60,10 +60,10 @@ struct FirstLoanView: View {
                          minTrackColor: .white,
                          maxTrackColor: .gray)
             HStack {
-              Text("1 000 000₫")
+              Text("from")
                 .foregroundColor(.white)
               Spacer()
-              Text("20 000 000₫")
+              Text("to")
                 .foregroundColor(.white)
             }.padding(.top, 16)
           }.padding(.all, 14)
@@ -74,7 +74,7 @@ struct FirstLoanView: View {
               .padding(.bottom, 16)
             HStack(spacing: 20) {
               agreementPersonalData()
-              Text("Tôi đồng ý với việc xử lý dữ liệu cá nhân của mình")
+              Text("agreement")
                 .foregroundColor(.black)
             }
           }
@@ -86,12 +86,12 @@ struct FirstLoanView: View {
       }.onTapGesture {
         UIApplication.shared.endEditing()
       }
-      .alert("Trạng thái vay", isPresented: $searchAdd) {
+      .alert("alertFirstText".localized(), isPresented: $searchAdd) {
         TextField("", text: $viewModel.searchLoan)
         Button("Ok", action: submit)
         Button("Cancel", role: .cancel) {}
       }
-      .alert("Số thứ tự không hợp lệ", isPresented: $showMessage) {
+      .alert("alertSecondText".localized(), isPresented: $showMessage) {
         Button("Ok", role: .cancel){}
       }
   }
@@ -109,7 +109,7 @@ struct FirstLoanView: View {
       }
     } label: {
       if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {
-        Text("Điền đơn")
+        Text("apply")
           .padding(16)
           .frame(maxWidth: .infinity)
           .background(Color.accentMain)
@@ -117,7 +117,7 @@ struct FirstLoanView: View {
           .padding(.horizontal, 16)
           .foregroundColor(.white)
       } else {
-        Text("Điền đơn")
+        Text("apply")
           .padding(16)
           .frame(maxWidth: .infinity)
           .background(Color.gray)
@@ -131,20 +131,20 @@ struct FirstLoanView: View {
   @ViewBuilder private func textFieldsAuthentication() -> some View {
     VStack(spacing: -20) {
       VStack(alignment: .leading, spacing: 2) {
-        Text("Tên")
+        Text("name")
           .font(.system(size: 14))
         TextField("", text: $viewModel.name)
             .modifier(TextFieldsModifier())
       }.padding()
       VStack(alignment: .leading, spacing: 2) {
-        Text("Email")
+        Text("personalEmail")
           .font(.system(size: 14))
         TextField("", text: $viewModel.email)
             .modifier(TextFieldsModifier())
             .keyboardType(.emailAddress)
       }.padding()
       VStack(alignment: .leading, spacing: 2) {
-        Text("Số điện thoại")
+        Text("phoneNumber")
           .font(.system(size: 14))
         TextField("", text: $viewModel.phoneNumber)
             .modifier(TextFieldsModifier())

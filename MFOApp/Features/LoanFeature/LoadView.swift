@@ -46,7 +46,7 @@ struct LoadView: View {
             )
             .rotationEffect(.degrees(-90))
         }.frame(width: 120, height: 120)
-        Text("Chúng tôi đang tìm các đề xuất cho bạn")
+        Text("loadText")
           .font(.system(size: 21, weight: .medium))
           .foregroundColor(.black)
           .padding()

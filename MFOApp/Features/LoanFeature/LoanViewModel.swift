@@ -41,11 +41,13 @@ final class LoanViewModel: ObservableObject {
           let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
           return phoneTest.evaluate(with: phone)
       }
-  var model = [LoanModel(image: "cozmoB", loan: "tới 20 000 000₫", url: "https://qdqgury.com/46391?r=32115&itb"),
-               LoanModel(image: "dongoB", loan: "tới 20 000 000₫", url: "https://qdqgury.com/45823?r=32115&itb"),
-               LoanModel(image: "dongPlusB", loan: "tới 20 000 000₫", url: "https://qdqgury.com/45694?r=32115&itb"),
-               LoanModel(image: "jeffB", loan: "tới 30 000 000₫", url: "https://qdqgury.com/45258?r=32115&itb"),
-               LoanModel(image: "moneycatB", loan: "tới 10 000 000₫", url: "https://iujxnsp.com/44796?r=32115&itb"),
-               LoanModel(image: "takomoB", loan: "tới 10 000 000₫", url: "https://iujxnsp.com/43900?r=32115&itb"),
-               LoanModel(image: "vayVndB", loan: "tới 15 000 000₫", url: "https://iujxnsp.com/43525?r=32115&itb")]
+  var model = [LoanModel(image: "img1", loan: "toOffer1", url: "offer1"),
+               LoanModel(image: "img2", loan: "toOffer2", url: "offer2"),
+               LoanModel(image: "img3", loan: "toOffer3", url: "offer3"),
+               LoanModel(image: "img4", loan: "toOffer4", url: "offer4"),
+               LoanModel(image: "img5", loan: "toOffer5", url: "offer5"),
+               LoanModel(image: "img6", loan: "toOffer6", url: "offer6"),
+               LoanModel(image: "img7", loan: "toOffer7", url: "offer7"),
+               LoanModel(image: "img8", loan: "toOffer8", url: "offer8"),
+               LoanModel(image: "img9", loan: "toOffer9", url: "offer9")]
 }

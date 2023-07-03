@@ -30,6 +30,8 @@
 		7E521C9A2A4B058300EB4BD5 /* LoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */; };
 		7E521C9C2A4B7E4000EB4BD5 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */; };
 		7E6A6F062A4B949C00C48F79 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A6F052A4B949C00C48F79 /* LoanModel.swift */; };
+		7E92EE412A52DC5400BCAD8F /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92EE402A52DC5400BCAD8F /* String+Localizable.swift */; };
+		7E92EE492A52FCA700BCAD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E92EE4B2A52FCA700BCAD8F /* Localizable.strings */; };
 		7EFB943E2A4C8772005FB661 /* UIApplication+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */; };
 		9AE6FD252A40A4D900194820 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6FD242A40A4D900194820 /* NotificationService.swift */; };
 		9AE6FD292A40A4D900194820 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9AE6FD222A40A4D900194820 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -86,6 +88,10 @@
 		7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewModel.swift; sourceTree = "<group>"; };
 		7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		7E6A6F052A4B949C00C48F79 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
+		7E92EE402A52DC5400BCAD8F /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		7E92EE4A2A52FCA700BCAD8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E92EE4C2A52FCE200BCAD8F /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E92EE4D2A52FD0C00BCAD8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Init.swift"; sourceTree = "<group>"; };
 		9AE6FD1D2A40A42E00194820 /* MFOApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MFOApp.entitlements; sourceTree = "<group>"; };
 		9AE6FD222A40A4D900194820 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,7 @@
 		7E1ED8272A408FD900C777F3 = {
 			isa = PBXGroup;
 			children = (
+				7E92EE4B2A52FCA700BCAD8F /* Localizable.strings */,
 				7E1ED8322A408FD900C777F3 /* MFOApp */,
 				9AE6FD232A40A4D900194820 /* OneSignalNotificationServiceExtension */,
 				7E1ED8312A408FD900C777F3 /* Products */,
@@ -205,6 +212,7 @@
 				7E1ED86F2A40952400C777F3 /* WebViewContainer+init.swift */,
 				7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */,
 				7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */,
+				7E92EE402A52DC5400BCAD8F /* String+Localizable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -330,6 +338,8 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
+				ru,
 			);
 			mainGroup = 7E1ED8272A408FD900C777F3;
 			packageReferences = (
@@ -353,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1ED83B2A408FDA00C777F3 /* Preview Assets.xcassets in Resources */,
+				7E92EE492A52FCA700BCAD8F /* Localizable.strings in Resources */,
 				7E1ED8382A408FDA00C777F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +402,7 @@
 				7E1ED8642A40945A00C777F3 /* FirstLoanView.swift in Sources */,
 				7E1ED85C2A40916800C777F3 /* CreditCenterWebView.swift in Sources */,
 				7E1ED86C2A40950600C777F3 /* Colors+init.swift in Sources */,
+				7E92EE412A52DC5400BCAD8F /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,11 +424,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		7E92EE4B2A52FCA700BCAD8F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E92EE4A2A52FCA700BCAD8F /* en */,
+				7E92EE4C2A52FCE200BCAD8F /* vi */,
+				7E92EE4D2A52FD0C00BCAD8F /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		7E1ED83C2A408FDA00C777F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -478,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
