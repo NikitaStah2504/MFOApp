@@ -11,6 +11,8 @@
 "mainTitleText" = "Chúng tôi khuyên bạn nên gửi hồ sơ đến 3 công ty để tăng khả năng được duyệt khoản vay";
 "from" = "1 000 000₫";
 "to" = "20 000 000₫";
+"fromValue" = "1000000";
+"toValue" = "20000000";
 "offer1" = "https://qdqgury.com/46391?r=32115&itb";
 "offer2" = "https://qdqgury.com/45823?r=32115&itb";
 "offer3" = "https://qdqgury.com/45694?r=32115&itb";

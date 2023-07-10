@@ -53,26 +53,29 @@ class AppDelegate: NSObject, UIApplicationDelegate, AppsFlyerLibDelegate {
     }, withFailure: {error in
         print("Set external user id done with error: " + error.debugDescription)
     })
-    
+    requestTrackingAuthorization()
     return true
   }
   
-  @objc func applicationDidBecomeActive(_ application: UIApplication) {
-    AppsFlyerLib.shared().start()
-    
-    if #available(iOS 14, *) {
-      ATTrackingManager.requestTrackingAuthorization { (status) in
-        switch status {
-        case .denied:
-          print("AuthorizationSatus is denied")
-        case .notDetermined:
-          print("AuthorizationSatus is notDetermined")
-        case .restricted:
-          print("AuthorizationSatus is restricted")
-        case .authorized:
-          print("AuthorizationSatus is authorized")
-        @unknown default:
-          fatalError("Invalid authorization status")
+  private func requestTrackingAuthorization() {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      if #available(iOS 14, *) {
+        ATTrackingManager.requestTrackingAuthorization { status in
+          DispatchQueue.main.async {
+            switch status {
+            case .denied:
+              print("AuthorizationSatus is denied")
+            case .notDetermined:
+              print("AuthorizationSatus is notDetermined")
+            case .restricted:
+              print("AuthorizationSatus is restricted")
+            case .authorized:
+              AppsFlyerLib.shared().start()
+              print("AuthorizationSatus is authorized")
+            @unknown default:
+              fatalError("Invalid authorization status")
+            }
+          }
         }
       }
     }

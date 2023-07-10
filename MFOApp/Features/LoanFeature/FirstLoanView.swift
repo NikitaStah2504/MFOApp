@@ -54,8 +54,8 @@ struct FirstLoanView: View {
             }.padding(.top, 20)
           VStack {
             UISliderView(value: $viewModel.loanAmount,
-                         minValue: 1000000,
-                         maxValue: 20000000,
+                         minValue: Double("fromValue".localized()) ?? 0.0,
+                         maxValue: Double("toValue".localized()) ?? 0.0,
                          thumbColor: .white,
                          minTrackColor: .white,
                          maxTrackColor: .gray)

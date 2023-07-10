@@ -66,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E1E2FA32A5C062300927922 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		7E1ED8302A408FD900C777F3 /* Cashio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1ED8332A408FD900C777F3 /* MFOAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFOAppApp.swift; sourceTree = "<group>"; };
 		7E1ED8352A408FD900C777F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		9AE6FD222A40A4D900194820 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE6FD242A40A4D900194820 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		9AE6FD262A40A4D900194820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AE6FD332A40A55400194820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +147,8 @@
 		7E1ED8322A408FD900C777F3 /* MFOApp */ = {
 			isa = PBXGroup;
 			children = (
-				9AE6FD332A40A55400194820 /* Info.plist */,
 				9AE6FD1D2A40A42E00194820 /* MFOApp.entitlements */,
+				7E1E2FA32A5C062300927922 /* info.plist */,
 				7E1ED8432A40901E00C777F3 /* NetworkService */,
 				7E1ED8422A40901500C777F3 /* Features */,
 				7E1ED8412A40900500C777F3 /* CommonUI */,
