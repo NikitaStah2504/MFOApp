@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  MFOApp
+
+  Created by Nikita Stshovsky on 10.07.2023.
+  
+*/
+"NSUserTrackingUsageDescription" = "Нажатие «Разрешить» поможет получать более актуальный рекламный контент и рекомендации.";

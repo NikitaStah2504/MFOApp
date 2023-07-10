@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  MFOApp
+
+  Created by Nikita Stshovsky on 10.07.2023.
+  
+*/
+
+"NSUserTrackingUsageDescription" = "Nhấn «Cho phép» sẽ giúp nhận được các đề xuất và nội dung quảng cáo phù hợp hơn";

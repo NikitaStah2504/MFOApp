@@ -58,7 +58,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, AppsFlyerLibDelegate {
   }
   
   private func requestTrackingAuthorization() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
       if #available(iOS 14, *) {
         ATTrackingManager.requestTrackingAuthorization { status in
           DispatchQueue.main.async {
