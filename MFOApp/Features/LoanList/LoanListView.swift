@@ -30,12 +30,8 @@ struct LoanListView: View {
             Color.backList
             ScrollView(showsIndicators: false) {
               LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                ForEach(viewModel.model) { item in
-                  if item.loan.localized() == "" {
-                    EmptyView()
-                  } else {
-                    LoanListCellView(image: item.image, amount: item.loan, org: item.url)
-                  }
+                ForEach(viewModel.model ?? []) { item in
+                  LoanListCellView(image: item.logo, amount: item.sumMax, org: item.site, sumMin: item.sumMin, sumMax: item.sumMax, rateMin: item.rateMin, rateMax: item.rateMax, termMin: item.termMin, termMax: item.termMax)
                 }
               }.padding(.top, 30)
             }
@@ -46,6 +42,9 @@ struct LoanListView: View {
       .onDisappear {
         UserDefaults.standard.set(false, forKey: "firstLaunch")
       }
+    }
+    .onAppear {
+      viewModel.sendData()
     }
   }
 }

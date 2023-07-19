@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>This app will use this identifier to provide you with personalized ads.</string>
+	<string>Pressing «Allow» will help to receive more relevant ads content and recommendations</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

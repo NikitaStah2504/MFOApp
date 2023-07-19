@@ -9,7 +9,7 @@ import Foundation
 
 final class NetworkService {
   
-  func postUserData(name: String, phone: String, email: String, loanAmount: Double) {
+  func postUserData(name: String, phone: String, email: String, loanAmount: Double, completion: @escaping ([Card]?) -> ()) {
     let json: [String: Any] = ["name": name, "phone": phone, "email": email, "loan_amount": loanAmount, "id": externalUserId, "appsuid": appsFlyerDevKey]
       let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
 
@@ -26,9 +26,9 @@ final class NetworkService {
             print(error?.localizedDescription ?? "no Data")
           return
         }
-        let responseJson = try? JSONDecoder().decode(NetworkModel.self, from: data)
+        let responseJson = try? JSONDecoder().decode(ProductModel.self, from: data)
           if let responseJson = responseJson {
-            UserDefaults.standard.set(responseJson.msg, forKey: "message")
+            completion(responseJson.cards)
           }
       }
       task.resume()

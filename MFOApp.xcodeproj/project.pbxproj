@@ -31,6 +31,7 @@
 		7E521C9A2A4B058300EB4BD5 /* LoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */; };
 		7E521C9C2A4B7E4000EB4BD5 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */; };
 		7E6A6F062A4B949C00C48F79 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A6F052A4B949C00C48F79 /* LoanModel.swift */; };
+		7E859C422A617D8500428562 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E859C412A617D8500428562 /* InfoView.swift */; };
 		7E92EE412A52DC5400BCAD8F /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92EE402A52DC5400BCAD8F /* String+Localizable.swift */; };
 		7E92EE492A52FCA700BCAD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E92EE4B2A52FCA700BCAD8F /* Localizable.strings */; };
 		7EFB943E2A4C8772005FB661 /* UIApplication+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB943D2A4C8772005FB661 /* UIApplication+Init.swift */; };
@@ -93,6 +94,7 @@
 		7E521C992A4B058300EB4BD5 /* LoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewModel.swift; sourceTree = "<group>"; };
 		7E521C9B2A4B7E4000EB4BD5 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		7E6A6F052A4B949C00C48F79 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
+		7E859C412A617D8500428562 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		7E92EE402A52DC5400BCAD8F /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		7E92EE4A2A52FCA700BCAD8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E92EE4C2A52FCE200BCAD8F /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		7E1ED8422A40901500C777F3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7E859C402A617D7400428562 /* Information */,
 				7E521C942A4AED9B00EB4BD5 /* LoanList */,
 				7E1ED8492A40907B00C777F3 /* LoanFeature */,
 				7E1ED8482A40907100C777F3 /* CreditWebView */,
@@ -251,6 +254,14 @@
 				7E6A6F052A4B949C00C48F79 /* LoanModel.swift */,
 			);
 			path = LoanList;
+			sourceTree = "<group>";
+		};
+		7E859C402A617D7400428562 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				7E859C412A617D8500428562 /* InfoView.swift */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 		9AE6FD232A40A4D900194820 /* OneSignalNotificationServiceExtension */ = {
@@ -400,6 +411,7 @@
 				7E1ED85E2A40917600C777F3 /* WebModel.swift in Sources */,
 				7E1ED8682A40948A00C777F3 /* NetworkModel.swift in Sources */,
 				7E1ED8722A40954100C777F3 /* TextFieldsModifier.swift in Sources */,
+				7E859C422A617D8500428562 /* InfoView.swift in Sources */,
 				7E1ED8342A408FD900C777F3 /* MFOAppApp.swift in Sources */,
 				7E521C9C2A4B7E4000EB4BD5 /* CustomSliderView.swift in Sources */,
 				7E6A6F062A4B949C00C48F79 /* LoanModel.swift in Sources */,

@@ -14,6 +14,7 @@ final class LoanViewModel: ObservableObject {
   @Published var showLoad = false
   @Published var showModal = false
   @Published var searchLoan = ""
+  @Published var model: [Card]?
   
   private let networkService = NetworkService()
   
@@ -24,7 +25,13 @@ final class LoanViewModel: ObservableObject {
   }
   
   func sendData() {
-    networkService.postUserData(name: name, phone: phoneNumber, email: email, loanAmount: loanAmount)
+    networkService.postUserData(name: name, phone: phoneNumber, email: email, loanAmount: loanAmount) { card in
+      if let model = card {
+        DispatchQueue.main.async {
+          self.model = model
+        }
+      }
+    }
   }
   
   func textFieldValidatorEmail(_ string: String) -> Bool {
@@ -41,13 +48,4 @@ final class LoanViewModel: ObservableObject {
           let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
           return phoneTest.evaluate(with: phone)
       }
-  var model = [LoanModel(image: "img1", loan: "toOffer1", url: "offer1"),
-               LoanModel(image: "img2", loan: "toOffer2", url: "offer2"),
-               LoanModel(image: "img3", loan: "toOffer3", url: "offer3"),
-               LoanModel(image: "img4", loan: "toOffer4", url: "offer4"),
-               LoanModel(image: "img5", loan: "toOffer5", url: "offer5"),
-               LoanModel(image: "img6", loan: "toOffer6", url: "offer6"),
-               LoanModel(image: "img7", loan: "toOffer7", url: "offer7"),
-               LoanModel(image: "img8", loan: "toOffer8", url: "offer8"),
-               LoanModel(image: "img9", loan: "toOffer9", url: "offer9")]
 }
