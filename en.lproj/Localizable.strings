@@ -1,13 +1,21 @@
 
-"name" = "Name";
-"personalEmail" = "Email";
-"phoneNumber" = "Phone number";
-"agreement" = "I consent to the processing of my personal data";
-"currency" = "₫";
-"apply" = "Điền đơn";
-"firstLoan" = "Lãi suất từ 0%";
-"valueLoan" = "Tổng số tiền tới";
-"loadText" = "Chúng tôi đang tìm các đề xuất cho bạn";
-"mainTitleText" = "Chúng tôi khuyên bạn nên gửi hồ sơ đến 3 công ty để tăng khả năng được duyệt khoản vay";
-"from" = "1000$";
-"to" = "10 000$";
+"name" = "Ваше имя";
+"personalEmail" = "Адрес эл. почты";
+"phoneNumber" = "Номер телефона";
+"agreement" = "Я даю согласие на обработку своих персональных данных";
+"currency%.f" = "₽ %.f";
+"apply" = "Подать заявку";
+"firstLoan" = "Первый займ под 0%";
+"valueLoan" = "Сумма займа";
+"loadText" = "Выбираем что можно предложить";
+"mainTitleText" = "Рекомендуем отправить заявку в 3 компании для повышения шанса на одобрение кредита";
+"from" = "5000₽";
+"to" = "50 000₽";
+"fromValue" = "5000";
+"toValue" = "50000";
+"sum" = "Сумма:";
+"rate" = "Ставка:";
+"term" = "Срок:";
+"alertFirstText" = "Введите номер заявки";
+"alertSecondText" = "Некорректный номер заявки";
+

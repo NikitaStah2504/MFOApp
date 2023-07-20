@@ -9,8 +9,8 @@ import Foundation
 
 let appName = "MFOApplication"
 let appsFlyerDevKey: String = "A3FZNt6b2BGvpDgbzidhmf"
-let oneSignalKey: String = ""
-let appID: String = "dfb3af77-3281-4189-a322-0149666f582d"
+let oneSignalKey: String = "dfb3af77-3281-4189-a322-0149666f582d"
+let appID: String = "id6450367160"
 let externalUserId = UUID_
 
 var UUID_ : String {

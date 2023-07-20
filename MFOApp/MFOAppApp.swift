@@ -30,12 +30,12 @@ class AppDelegate: NSObject, UIApplicationDelegate, AppsFlyerLibDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     print("finished lainching!")
     AppsFlyerLib.shared().appsFlyerDevKey = "A3FZNt6b2BGvpDgbzidhmf"
-    AppsFlyerLib.shared().appleAppID = "MFOApp"
+    AppsFlyerLib.shared().appleAppID = appID
     AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
     
     OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
     OneSignal.initWithLaunchOptions(launchOptions)
-    OneSignal.setAppId(appID)
+    OneSignal.setAppId(oneSignalKey)
     OneSignal.promptForPushNotifications { accepted in
       print("User accepted notification \(accepted)")
     }
@@ -58,7 +58,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, AppsFlyerLibDelegate {
   }
   
   private func requestTrackingAuthorization() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
       if #available(iOS 14, *) {
         ATTrackingManager.requestTrackingAuthorization { status in
           DispatchQueue.main.async {

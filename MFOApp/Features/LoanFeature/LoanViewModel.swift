@@ -10,7 +10,7 @@ final class LoanViewModel: ObservableObject {
   @Published var name: String = ""
   @Published var phoneNumber: String = ""
   @Published var email: String = ""
-  @Published var loanAmount: Double = 1000000.0
+  @Published var loanAmount: Double = 5000.0
   @Published var showLoad = false
   @Published var showModal = false
   @Published var searchLoan = ""
