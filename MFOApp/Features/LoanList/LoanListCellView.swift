@@ -17,6 +17,7 @@ struct LoanListCellView: View {
   var rateMax: Int
   var termMin: Int
   var termMax: Int
+  var precent: Int
   @State private var expand = false
   
   var body: some View {
@@ -71,7 +72,7 @@ struct LoanListCellView: View {
       .shadow(color: .gray, radius: 3.0)
       .animation(.spring())
       if expand {
-        InfoView(sumMin: sumMin, sumMax: sumMax, rateMin: rateMin, rateMax: rateMax, termMin: termMin, termMax: termMax)
+        InfoView(sumMin: sumMin, sumMax: sumMax, rateMin: rateMin, rateMax: rateMax, termMin: termMin, termMax: termMax, precent: precent)
       }
     }
   }

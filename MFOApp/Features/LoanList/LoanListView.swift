@@ -31,7 +31,7 @@ struct LoanListView: View {
             ScrollView(showsIndicators: false) {
               LazyVGrid(columns: gridItemLayout, spacing: 20) {
                 ForEach(viewModel.model ?? []) { item in
-                  LoanListCellView(image: item.logo, amount: item.sumMax, org: item.site, sumMin: item.sumMin, sumMax: item.sumMax, rateMin: item.rateMin, rateMax: item.rateMax, termMin: item.termMin, termMax: item.termMax)
+                  LoanListCellView(image: item.logo, amount: item.sumMax, org: item.site, sumMin: item.sumMin, sumMax: item.sumMax, rateMin: item.rateMin, rateMax: item.rateMax, termMin: item.termMin, termMax: item.termMax, precent: item.chance)
                 }
               }.padding(.top, 30)
             }

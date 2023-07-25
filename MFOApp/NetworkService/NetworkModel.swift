@@ -21,6 +21,7 @@ struct Card: Codable, Identifiable {
     let sumMin, sumMax, rateMin, rateMax: Int
     let termMin, termMax: Int
     let site: String
+    let chance: Int
 
     enum CodingKeys: String, CodingKey {
         case name, special, logo
@@ -31,5 +32,6 @@ struct Card: Codable, Identifiable {
         case termMin = "term_min"
         case termMax = "term_max"
         case site
+        case chance
     }
 }
