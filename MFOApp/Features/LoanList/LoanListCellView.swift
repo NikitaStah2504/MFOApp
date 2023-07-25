@@ -34,7 +34,7 @@ struct LoanListCellView: View {
             .background(Color.white)
             .frame(width: 94, height: 30)
         }
-        Text("\(amount)")
+        Text("\(amount)₽")
           .font(.system(size: 14, weight: .semibold))
           .frame(width: 94, height: 30)
         }.padding()
