@@ -27,7 +27,7 @@ struct FirstLoanView: View {
         Image("backImage")
           .resizable()
           .scaledToFill()
-          .frame(width: 400, height: 300)
+          .frame(height: 300)
           .padding(.top, -310)
         VStack {
           VStack(alignment: .center) {
@@ -78,7 +78,7 @@ struct FirstLoanView: View {
                 .foregroundColor(.black)
             }
           }
-        }
+        }.padding()
       }
       .fullScreenCover(isPresented: $viewModel.showLoad) {
         LoadView(viewModel: viewModel)

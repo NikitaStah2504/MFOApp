@@ -19,7 +19,7 @@ struct LoanListView: View {
         Image("backImage")
           .resizable()
           .scaledToFill()
-          .frame(width: 400, height: 170)
+          .frame(height: 170)
           .padding(.top, -310)
         VStack(alignment: .center) {
           Text("mainTitleText")
