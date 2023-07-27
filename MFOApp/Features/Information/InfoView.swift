@@ -15,6 +15,7 @@ struct InfoView: View {
   @State var termMin: Int
   @State var termMax: Int
   @State var precent: Int
+  @State var special: String
 
   var body: some View {
     VStack(alignment: .leading, spacing: 10) {
@@ -47,7 +48,7 @@ struct InfoView: View {
           Text("rate".localized())
             .font(.system(size: 14, weight: .semibold))
             .foregroundColor(.black).opacity(0.8)
-          Text("\(rateMin)-\(rateMax)%")
+          Text("\(rateMin)-\(rateMax)% \(special)")
             .font(.system(size: 14, weight: .medium))
         }.frame(width: 160, height: 80)
           .overlay(

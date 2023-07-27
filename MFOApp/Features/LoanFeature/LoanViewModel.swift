@@ -44,8 +44,10 @@ final class LoanViewModel: ObservableObject {
   }
   
   func isValidPhone(phone: String) -> Bool {
-          let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
-          let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-          return phoneTest.evaluate(with: phone)
-      }
+    if phone.count <= 17 {
+      return false
+    } else {
+      return true
+    }
+  }
 }

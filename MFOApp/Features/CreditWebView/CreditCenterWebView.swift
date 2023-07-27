@@ -7,11 +7,10 @@
 
 import SwiftUI
 import AppsFlyerLib
-import PopupView
 
 struct CreditCenterWebView: View {
   
-  @StateObject
+  @ObservedObject
   var webViewModel = WebViewViewModel()
   var organizaitons: String
   
@@ -37,6 +36,7 @@ struct CreditCenterWebView: View {
         AppsFlyerLib.shared().logEvent(name: "Close_Web", values: [
           AFEventParamCustomerUserId: externalUserId
         ])
+        print("------------------------- === ==== = == === == ==== === ===== = == ===== = = =d=c=d=cd=")
       }
   }
 }

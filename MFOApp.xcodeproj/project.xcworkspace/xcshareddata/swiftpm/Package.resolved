@@ -10,21 +10,21 @@
       }
     },
     {
+      "identity" : "input-mask-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RedMadRobot/input-mask-ios",
+      "state" : {
+        "revision" : "b492f115cc8b3aeb1b6395b4c4157d6bba1fceab",
+        "version" : "7.3.2"
+      }
+    },
+    {
       "identity" : "onesignal-xcframework",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/OneSignal/OneSignal-XCFramework",
       "state" : {
         "revision" : "091f9c572b4a522f93cd1d4f2f524e3818a253f2",
         "version" : "3.12.5"
-      }
-    },
-    {
-      "identity" : "popupview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/PopupView.git",
-      "state" : {
-        "revision" : "184cf7b8b35ac25f965c28c6ca09f88a4dd43b82",
-        "version" : "2.5.1"
       }
     }
   ],

@@ -11,8 +11,6 @@ struct LoanListView: View {
   @EnvironmentObject
   var viewModel: LoanViewModel
   
-  private var gridItemLayout = [GridItem(.flexible())]
-  
   var body: some View {
     NavigationView {
       ZStack {
@@ -22,21 +20,31 @@ struct LoanListView: View {
           .frame(height: 170)
           .padding(.top, -310)
         VStack(alignment: .center) {
-          Text("mainTitleText")
-            .font(.system(size: 16, weight: .semibold))
-            .foregroundColor(.white)
-            .padding()
-          ZStack {
-            Color.backList
+          HStack {
+            Text("mainTitleText")
+              .font(.system(size: 16, weight: .semibold))
+              .foregroundColor(.white)
+              .padding()
+            NavigationLink {
+              LoanRulesView()
+            } label: {
+              Image(systemName: "list.bullet.clipboard")
+                .resizable()
+                .frame(width: 30, height: 40)
+                .foregroundColor(.white)
+            }
+          }
             ScrollView(showsIndicators: false) {
-              LazyVGrid(columns: gridItemLayout, spacing: 20) {
+              LazyVStack(spacing: 20) {
                 ForEach(viewModel.model ?? []) { item in
-                  LoanListCellView(image: item.logo, amount: item.sumMax, org: item.site, sumMin: item.sumMin, sumMax: item.sumMax, rateMin: item.rateMin, rateMax: item.rateMax, termMin: item.termMin, termMax: item.termMax, precent: item.chance)
+                  LoanListCellView(image: item.logo, amount: item.sumMax, org: item.site, sumMin: item.sumMin, sumMax: item.sumMax, rateMin: item.rateMin, rateMax: item.rateMax, termMin: item.termMin, termMax: item.termMax, precent: item.chance, special: item.special)
                 }
               }.padding(.top, 30)
-            }
-          }.frame(width: 362, height: 630)
-            .cornerRadius(15)
+               
+            }.frame(width: 362, height: 630)
+              .cornerRadius(15)
+              .background(Color.backList)
+              .cornerRadius(15)
         }
       }
       .onDisappear {

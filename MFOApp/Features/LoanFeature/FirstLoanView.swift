@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import InputMask
 struct FirstLoanView: View {
   @State
   private var total: Double = 0.0
@@ -18,11 +18,15 @@ struct FirstLoanView: View {
   private var searchAdd: Bool = false
   @State
   private var showMessage: Bool = false
+  @State
+  private var phone = ""
+  @State
+  private var phoneComplete = false
   
   @EnvironmentObject var viewModel: LoanViewModel
   
   var body: some View {
-      ScrollView(showsIndicators: false) {
+    ScrollView(showsIndicators: false) {
       ZStack {
         Image("backImage")
           .resizable()
@@ -51,7 +55,7 @@ struct FirstLoanView: View {
                   .frame(width: 26, height: 30)
               }
             }
-            }.padding(.top, 20)
+          }.padding(.top, 20)
           VStack {
             UISliderView(value: $viewModel.loanAmount,
                          minValue: Double("fromValue".localized()) ?? 0.0,
@@ -83,17 +87,17 @@ struct FirstLoanView: View {
       .fullScreenCover(isPresented: $viewModel.showLoad) {
         LoadView(viewModel: viewModel)
       }
-      }.onTapGesture {
-        UIApplication.shared.endEditing()
-      }
-      .alert("alertFirstText".localized(), isPresented: $searchAdd) {
-        TextField("", text: $viewModel.searchLoan)
-        Button("Ok", action: submit)
-        Button("Cancel", role: .cancel) {}
-      }
-      .alert("alertSecondText".localized(), isPresented: $showMessage) {
-        Button("Ok", role: .cancel){}
-      }
+    }.onTapGesture {
+      UIApplication.shared.endEditing()
+    }
+    .alert("alertFirstText".localized(), isPresented: $searchAdd) {
+      TextField("", text: $viewModel.searchLoan)
+      Button("Ok", action: submit)
+      Button("Cancel", role: .cancel) {}
+    }
+    .alert("alertSecondText".localized(), isPresented: $showMessage) {
+      Button("Ok", role: .cancel){}
+    }
   }
   
   private func submit() {
@@ -105,7 +109,6 @@ struct FirstLoanView: View {
       if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {
         viewModel.showLoad.toggle()
         viewModel.showTabBar()
-        viewModel.sendData()
       }
     } label: {
       if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {
@@ -134,21 +137,28 @@ struct FirstLoanView: View {
         Text("name")
           .font(.system(size: 14))
         TextField("", text: $viewModel.name)
-            .modifier(TextFieldsModifier())
+          .modifier(TextFieldsModifier())
       }.padding()
       VStack(alignment: .leading, spacing: 2) {
         Text("personalEmail")
           .font(.system(size: 14))
         TextField("", text: $viewModel.email)
-            .modifier(TextFieldsModifier())
-            .keyboardType(.emailAddress)
+          .modifier(TextFieldsModifier())
+          .keyboardType(.emailAddress)
       }.padding()
       VStack(alignment: .leading, spacing: 2) {
         Text("phoneNumber")
           .font(.system(size: 14))
-        TextField("", text: $viewModel.phoneNumber)
-            .modifier(TextFieldsModifier())
-            .keyboardType(.numberPad)
+        MaskedTextField(
+          text: $viewModel.phoneNumber,
+          value: $phone,
+          complete: $phoneComplete,
+          placeholder: "+7 (000) 000-00-00",
+          primaryMaskFormat: "+7 ([000]) [000]-[00]-[00]"
+        )
+        .padding()
+        .modifier(TextFieldsModifier())
+        .keyboardType(.numberPad)
       }.padding()
     }
   }

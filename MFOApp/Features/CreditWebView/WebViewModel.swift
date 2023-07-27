@@ -14,10 +14,8 @@ final class WebViewViewModel: ObservableObject {
   @Published var canGoBack: Bool = false
   @Published var reload: Bool = false
   @Published var shouldReload: Bool = false
-  @Published var hideBar: Bool = false
   @Published var goHome: Bool = false
   @Published var shouldGoBack: Bool = false
-  @Published var showPopup = false
   @Published var title: String = ""
   @Published var showBottomSheet: Bool = false
  
