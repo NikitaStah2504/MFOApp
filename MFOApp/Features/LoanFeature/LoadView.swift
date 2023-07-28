@@ -51,6 +51,9 @@ struct LoadView: View {
           .foregroundColor(.black)
           .padding()
       }
+      .onDisappear {
+        UserDefaults.standard.set(false, forKey: "firstLaunch")
+      }
     }
     .task {
       withAnimation(.easeIn(duration: 5)) {
@@ -62,9 +65,3 @@ struct LoadView: View {
     }
   }
 }
-
-//struct LoadView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    LoadView()
-//  }
-//}

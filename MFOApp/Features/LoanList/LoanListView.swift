@@ -47,9 +47,6 @@ struct LoanListView: View {
               .cornerRadius(15)
         }
       }
-      .onDisappear {
-        UserDefaults.standard.set(false, forKey: "firstLaunch")
-      }
     }
     .onAppear {
       viewModel.sendData()
