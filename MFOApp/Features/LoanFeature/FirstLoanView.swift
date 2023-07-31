@@ -108,7 +108,7 @@ struct FirstLoanView: View {
     Button {
       if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {
         viewModel.showLoad.toggle()
-        viewModel.showTabBar()
+        viewModel.detectFirstLaunch()
       }
     } label: {
       if viewModel.textFieldValidatorEmail(viewModel.email) && viewModel.isValidPhone(phone: viewModel.phoneNumber) && agreement {

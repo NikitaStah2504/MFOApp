@@ -51,17 +51,11 @@ struct LoadView: View {
           .foregroundColor(.black)
           .padding()
       }
-      .onDisappear {
-        UserDefaults.standard.set(false, forKey: "firstLaunch")
-      }
     }
     .task {
       withAnimation(.easeIn(duration: 5)) {
         progress = 1.0
       }
-    }
-    .fullScreenCover(isPresented: $viewModel.showModal) {
-      LoanListView().environmentObject(LoanViewModel())
     }
   }
 }

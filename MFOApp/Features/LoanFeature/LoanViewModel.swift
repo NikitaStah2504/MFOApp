@@ -10,17 +10,16 @@ final class LoanViewModel: ObservableObject {
   @Published var name: String = ""
   @Published var phoneNumber: String = ""
   @Published var email: String = ""
-  @Published var loanAmount: Double = 5000.0
+  @Published var loanAmount: Double = 3000.0
   @Published var showLoad = false
-  @Published var showModal = false
   @Published var searchLoan = ""
   @Published var model: [Card]?
   
   private let networkService = NetworkService()
   
-   func showTabBar() {
+  func detectFirstLaunch() {
     DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-      self.showModal = true
+      UserDefaults.standard.set(false, forKey: "firstLaunch")
     }
   }
   

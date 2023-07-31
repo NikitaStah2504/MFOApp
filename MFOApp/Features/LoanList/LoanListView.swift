@@ -20,7 +20,7 @@ struct LoanListView: View {
           .frame(height: 170)
           .padding(.top, -310)
         VStack(alignment: .center) {
-          HStack {
+          HStack(alignment: .center) {
             Text("mainTitleText")
               .font(.system(size: 16, weight: .semibold))
               .foregroundColor(.white)
@@ -35,10 +35,10 @@ struct LoanListView: View {
             }
           }
             ScrollView(showsIndicators: false) {
-              LazyVStack(spacing: 20) {
+              VStack(spacing: 20) {
                 ForEach(viewModel.model ?? []) { item in
                   LoanListCellView(image: item.logo, amount: item.sumMax, org: item.site, sumMin: item.sumMin, sumMax: item.sumMax, rateMin: item.rateMin, rateMax: item.rateMax, termMin: item.termMin, termMax: item.termMax, precent: item.chance, special: item.special)
-                }
+                }.padding(4)
               }.padding(.top, 30)
                
             }.frame(width: 362, height: 630)

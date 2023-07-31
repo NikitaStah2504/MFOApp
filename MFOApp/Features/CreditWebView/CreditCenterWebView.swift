@@ -36,7 +36,6 @@ struct CreditCenterWebView: View {
         AppsFlyerLib.shared().logEvent(name: "Close_Web", values: [
           AFEventParamCustomerUserId: externalUserId
         ])
-        print("------------------------- === ==== = == === == ==== === ===== = == ===== = = =d=c=d=cd=")
       }
   }
 }
