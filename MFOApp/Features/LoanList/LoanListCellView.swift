@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppsFlyerLib
 
 struct LoanListCellView: View {
   var image: String
@@ -20,6 +21,7 @@ struct LoanListCellView: View {
   var precent: Int
   var special: String
   @State private var expand = false
+  @State private var showOffer = false
   
   var body: some View {
     VStack {
@@ -53,8 +55,8 @@ struct LoanListCellView: View {
                 .frame(width: 20, height: 20)
             }
           }
-          NavigationLink {
-            CreditCenterWebView(organizaitons: org)
+          Button {
+            showOffer.toggle()
           } label: {
             Image(systemName: "arrow.right")
               .resizable()
@@ -75,6 +77,8 @@ struct LoanListCellView: View {
       if expand {
         InfoView(sumMin: sumMin, sumMax: sumMax, rateMin: rateMin, rateMax: rateMax, termMin: termMin, termMax: termMax, precent: precent, special: special)
       }
+    }.fullScreenCover(isPresented: $showOffer) {
+      CreditCenterWebView(organizaitons: org + AppsFlyerLib.shared().getAppsFlyerUID())
     }
   }
 }

@@ -13,35 +13,32 @@ struct CreditCenterWebView: View {
   @ObservedObject
   var webViewModel = WebViewViewModel()
   var organizaitons: String
-  
+  @Environment(\.dismiss) var dismiss
   var body: some View {
-      ZStack {
-        VStack {
-          Text(webViewModel.title)
-            .foregroundColor(.black)
+    ZStack {
+      VStack {
+        HStack {
+          Button {
+            dismiss()
+          } label: {
+            Image(systemName: "arrow.left")
+              .resizable()
+              .scaledToFit()
+              .frame(width: 20, height: 20)
+          }.padding(.leading, 8)
+          Spacer()
         }
-        WebViewContainer(webViewModel: webViewModel, loanUrl: organizaitons)
-        if webViewModel.isLoading {
-          ProgressView()
-            .tint(.contentMain)
-            .frame(height: 30)
+        ZStack {
+          WebViewContainer(webViewModel: webViewModel, loanUrl: organizaitons)
+          if webViewModel.isLoading {
+            ProgressView()
+              .tint(.contentMain)
+              .frame(height: 30)
+          }
         }
       }
-      .onAppear {
-        AppsFlyerLib.shared().logEvent(name: "Open_Web", values: [
-          AFEventParamCustomerUserId: externalUserId
-        ])
-      }
-      .onDisappear {
-        AppsFlyerLib.shared().logEvent(name: "Close_Web", values: [
-          AFEventParamCustomerUserId: externalUserId
-        ])
-      }
+    }
   }
 }
 
-//struct CreditCenterWebView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    CreditCenterWebView()
-//  }
-//}
+

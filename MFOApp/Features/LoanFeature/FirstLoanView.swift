@@ -80,7 +80,7 @@ struct FirstLoanView: View {
               agreementPersonalData()
               Text("agreement")
                 .foregroundColor(.black)
-            }
+            }.frame(height: 60)
           }
         }.padding()
       }

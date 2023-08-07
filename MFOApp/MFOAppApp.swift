@@ -70,8 +70,10 @@ class AppDelegate: NSObject, UIApplicationDelegate, AppsFlyerLibDelegate {
             case .restricted:
               print("AuthorizationSatus is restricted")
             case .authorized:
+              print(externalUserId)
               AppsFlyerLib.shared().start()
               print("AuthorizationSatus is authorized")
+              print("\(AppsFlyerLib.shared().getAppsFlyerUID())")
             @unknown default:
               fatalError("Invalid authorization status")
             }
